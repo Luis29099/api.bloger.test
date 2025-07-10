@@ -9,11 +9,11 @@ use Illuminate\Http\Request;
 class ComputerController extends Controller
 {
     public function index(){
-        // $computers=Computer::included()->get();
-        $computers=Computer::with(['apprentice']);
-        return response()->json($computers);
+        $computers=Computer::included()->get();
+        // $computers=Computer::with(['apprentice'])->get();
+        // return response()->json($computers);
     //     $computers=Computer::all();
-    //     return response()->json($computers);
+        return response()->json($computers);
     // }
     // public function store(Request $request){
     //     $request->validate([
